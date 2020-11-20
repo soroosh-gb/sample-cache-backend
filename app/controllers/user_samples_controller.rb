@@ -1,3 +1,0 @@
-class UserSamplesController < ApplicationController
-    
-end
