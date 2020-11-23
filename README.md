@@ -23,3 +23,7 @@ Things you may want to cover:
 
 * ...
 # sample-cache-backend
+
+
+- can't sign up
+- can't sign in
