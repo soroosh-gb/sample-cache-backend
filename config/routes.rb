@@ -5,6 +5,7 @@ Rails.application.routes.draw do
       resources :user_samples
       get '/usersamples', to: 'user_samples#index'
       post '/usersamples', to: 'user_samples#create'
+      delete '/usersamples/:id', to: 'user_samples#destroy'
       resources :samples
       resources :users
       post '/login', to:'auth#create'

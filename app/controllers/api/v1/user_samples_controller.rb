@@ -2,6 +2,7 @@ class Api::V1::UserSamplesController < ApplicationController
     skip_before_action :authorized
 
     def index 
+        # byebug
         userSamples = UserSample.all 
 
         render json: userSamples
@@ -19,6 +20,7 @@ class Api::V1::UserSamplesController < ApplicationController
     end
     
     def destroy
+        byebug
         userSample = UserSample.find(params[:id])
         user = userSample.user
         userSample.destroy
