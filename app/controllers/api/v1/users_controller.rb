@@ -5,6 +5,7 @@ class Api::V1::UsersController < ApplicationController
     def index
         users = User.all 
 
+        
         render json: users
     end
 
@@ -28,6 +29,11 @@ class Api::V1::UsersController < ApplicationController
         else
           render json: { error: 'failed to create user' }, status: :not_acceptable
         end
+      end
+
+      def mySamples
+       
+        # byebug
       end
 
     # def create

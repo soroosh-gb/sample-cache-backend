@@ -1,7 +1,10 @@
 class Api::V1::UserSamplesController < ApplicationController
+    skip_before_action :authorized
 
     def index 
-    
+        userSamples = UserSample.all 
+
+        render json: userSamples
     end
 
     def new
@@ -9,7 +12,10 @@ class Api::V1::UserSamplesController < ApplicationController
     end
 
     def create
-        userSample = UserSample.create(params.require(:userSample).permit(:sample_id, :user_id))
+        # byebug
+        userSample = UserSample.create(user_id: params[:user_id], sample_id: params[:sample_id])
+        
+        render json: userSample
     end
     
     def destroy
@@ -17,4 +23,8 @@ class Api::V1::UserSamplesController < ApplicationController
         user = userSample.user
         userSample.destroy
     end
+
+    # def userSample_params
+    #     params.require(:userSample).permit!
+    # end
 end

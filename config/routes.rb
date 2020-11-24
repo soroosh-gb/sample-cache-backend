@@ -3,10 +3,13 @@ Rails.application.routes.draw do
     namespace :v1 do
       resources :comments
       resources :user_samples
+      get '/usersamples', to: 'user_samples#index'
+      post '/usersamples', to: 'user_samples#create'
       resources :samples
       resources :users
       post '/login', to:'auth#create'
       get '/profile', to: 'users#profile'
+      get '/mysamples', to:'users#mySamples'
       # post "/login", to: "auth#login"
       # get "/auto_login", to: "auth#auto_login"
       # get "/user_is_authed", to: "auth#user_is_authed"
