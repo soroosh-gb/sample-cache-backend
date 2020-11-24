@@ -20,10 +20,12 @@ class Api::V1::UserSamplesController < ApplicationController
     end
     
     def destroy
-        byebug
+        # byebug
         userSample = UserSample.find(params[:id])
         user = userSample.user
         userSample.destroy
+
+        render json: userSample
     end
 
     # def userSample_params
