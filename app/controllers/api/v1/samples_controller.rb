@@ -31,9 +31,11 @@ class Api::V1::SamplesController < ApplicationController
 
 
     def destroy
-        sample  = Sample.find(params[:id])
+        sample = Sample.find(params[:id])
 
         sample.destroy
+
+        render json: sample
     end
 
 
