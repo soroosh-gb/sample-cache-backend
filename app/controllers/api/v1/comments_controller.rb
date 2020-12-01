@@ -21,9 +21,9 @@ class Api::V1::CommentsController < ApplicationController
     def update
         # byebug
         comment =  Comment.find(params[:id]) 
-        new_comment = comment.update(text: params[:text])
+        comment.update(text: params[:text])
         
-        render json: (new_comment)
+        render json: (comment)
     end
 
     def destroy
