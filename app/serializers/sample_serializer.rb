@@ -1,5 +1,5 @@
 class SampleSerializer < ActiveModel::Serializer
-  attributes :id, :name, :image_file, :audio_file, :genre, :collection, :users, :creator
+  attributes :id, :name, :image_file, :audio_file, :genre, :collection, :users, :creator, :comments
 
     # has_many    :user_samples
     # has_many    :users, through: :user_samples
