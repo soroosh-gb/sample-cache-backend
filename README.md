@@ -1,25 +1,11 @@
-# README
+sample-cache-backend
 
-This README would normally document whatever steps are necessary to get the
-application up and running.
+Sample Cache helps music producers find & share a variety of audio samples used in music production.
 
-Things you may want to cover:
+<img src="https://static.voices.com/wp-content/uploads/frequencies.jpg" />
 
-* Ruby version
+- Utilized JSON Web Tokens and localStorage to store encrypted user information client-side.
+- Utilized Cloudinary to implement file storage management in the cloud.
+-  Utilized React audio player to stream audio content and give user access to download the audio file.
+- Added social features such as commenting to increase user interaction with the service.
 
-* System dependencies
-
-* Configuration
-
-* Database creation
-
-* Database initialization
-
-* How to run the test suite
-
-* Services (job queues, cache servers, search engines, etc.)
-
-* Deployment instructions
-
-* ...
-# sample-cache-backend
